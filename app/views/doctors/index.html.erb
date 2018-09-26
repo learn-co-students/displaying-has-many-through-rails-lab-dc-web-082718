@@ -1,0 +1,9 @@
+
+<h1> List of Doctors at this Hospital </h1>
+
+
+<ul>
+<% @doctors.each do |doctor| %>
+    <li><%= link_to "Name: "+ doctor.name + " Number of Patients: #{doctor.patients.count}" , doctor_path(doctor) %></li>
+<% end %>
+</ul>
